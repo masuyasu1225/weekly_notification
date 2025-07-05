@@ -24,7 +24,8 @@ async def send_mokumoku_message():
         event_date = now + timedelta(days=7)  # ✅ 次週の土曜日
         date_str = format_datetime(event_date, "M/d(EEE)", locale="ja_JP")
 
-        message = f"""{date_str} 9:00~12:00もくもく会
+        message = f"""@everyone
+{date_str} 9:00~12:00もくもく会
 参加できる人→🙆‍♂️
 参加できない人→🙅‍♀️
 のどっちかをこのメッセージに押してね"""
