@@ -15,7 +15,7 @@ async def on_ready():
     print(f'✅ Bot logged in as {bot.user}')
     send_mokumoku_message.start()
 
-@tasks.loop(seconds=10)  # ← テスト用。運用時は minutes=1 に戻す
+@tasks.loop(seconds=1000)  # ← テスト用。運用時は minutes=1 に戻す
 async def send_mokumoku_message():
     now = datetime.now(pytz.timezone("Asia/Tokyo"))
 
